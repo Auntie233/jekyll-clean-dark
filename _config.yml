@@ -55,4 +55,4 @@ kramdown:
 
 exclude: ['README.md', 'LICENSE']
 
-theme: jekyll-theme-slate
+# theme: jekyll-theme-slate
