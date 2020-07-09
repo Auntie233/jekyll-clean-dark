@@ -40,8 +40,10 @@ yandex_metrica:
 # disable on a post-by-post basis
 comments: 
   enable: true
-  type: disqus
+  type: valine
   nickname: Auntie Tai
+  appId: Ux5Fp8KMPwqdKEzCiB40oy2r-gzGzoHsz
+  appKey: k46J0SxVj8pkPoK4XXMIXvEP
 
 permalink: /:year/:month/:title/
 

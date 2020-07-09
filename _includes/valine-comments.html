@@ -1,0 +1,18 @@
+{% if page.comments.enable and page.comments.type == 'valine' %}
+<head>
+    ..
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    ...
+</head>
+<body>
+    ...
+    <div id="vcomments"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: '{{ site.comments.appId }}',
+            appKey: '{{ site.comments.appKey }}'
+        })
+    </script>
+</body>
+{% endif %}
