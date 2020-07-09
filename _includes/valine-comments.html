@@ -1,18 +1,26 @@
-{% if page.comments.enable and page.comments.type == 'valine' %}
-<head>
-    ..
-    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-    ...
-</head>
-<body>
-    ...
+{% if site.comments.enable and site.comments.type == 'valine' %}
+    <script src='https://unpkg.com/valine/dist/Valine.min.js'></script>
     <div id="vcomments"></div>
     <script>
         new Valine({
             el: '#vcomments',
             appId: '{{ site.comments.appId }}',
-            appKey: '{{ site.comments.appKey }}'
+            appKey: '{{ site.comments.appKey }}',
+            meta: ['nick', 'mail'],
+            requiredFields: ['nick'],
+            placeholder: '请畅所欲言...',
+            pageSize: 20,
+            visitor: true,
+            recordIP: true,
+            enableQQ: true
         })
     </script>
-</body>
+    <style>
+        .vwrap{
+            background-color: whitesmoke;
+        }
+        .v[data-class="v"] p{
+            color: whitesmoke;
+        }
+    </style>
 {% endif %}
