@@ -1,9 +1,9 @@
-{% if page.comments %}
+{% if page.comments.enable and page.comments.type == 'disqus' %}
 <!-- Add Disqus comments. -->
 <div id="disqus_thread"></div>
 <script type="text/javascript">
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-  var disqus_shortname = '{{ site.disqus }}'; // required: replace example with your forum shortname
+  var disqus_shortname = '{{ site.comments.nickname }}'; // required: replace example with your forum shortname
   var disqus_identifier = "{{ page.url | replace:'index.html','' }}";
 
   /* * * DON'T EDIT BELOW THIS LINE * * */
