@@ -7,17 +7,17 @@ tags: 学习 Spring
 toc: true
 ---
 
-## 1. Spring Security
+# 1. Spring Security
 
-### 1. 配置安全策略
+## 1. 配置安全策略
 
 实现WebSecurityConfigurerAdapter类并Enable WebSecurity
 
-### 2. 创建基础用户类型
+## 2. 创建基础用户类型
 
 实现UserDetails接口或其子接口，并实现getAuthorities()方法。
 
-### 3. 编写鉴权实现类
+## 3. 编写鉴权实现类
 
 编写AuthenticationProvider的子类，实现鉴权方法authenticate(Authentication auth)，其中参数auth为鉴权凭证[^1]，常用的凭证类型为UsernamePasswordAuthenticationToken，即为用户名密码登录token。
 
@@ -25,11 +25,11 @@ toc: true
 
 实现supports(Class<?> authentication)，判断该方法用于多鉴权环境下区分鉴权策略，方法体为判断authentication类型。
 
-### 4. 自定义安全策略
+## 4. 自定义安全策略
 
 编写SecurityConfigurerAdapter<T, H>的子类。其中T为安全过滤链，通常情况下为DefaultSecurityFilterChain。H为安全策略类型，通常情况下为HttpSecurity。 安全策略的注入需要在总HttpSecurity中apply方法传入。
 
-### 5. 其他句柄
+## 5. 其他句柄
 
 - AuthenticationFailureHandler	认证失败
 - LogoutHandler	登出
