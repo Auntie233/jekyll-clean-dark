@@ -39,7 +39,7 @@ yandex_metrica:
 # setting below must also be true. Individual posts can override 'comments' to
 # disable on a post-by-post basis
 comments: 
-  enable: true
+  enable: false
   type: valine
   nickname: Auntie Tai
   appId: Ux5Fp8KMPwqdKEzCiB40oy2r-gzGzoHsz
